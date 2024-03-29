@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .smallAppBar > .brand-tabs {
+    justify-content: flex-start;
+  }
+  .smallAppBar > .brand-tabs > .side-brand {
+    width: 65%;
+    padding-left: 80px;
+  }
+  .smallAppBar > .search-login {
+    width: 35%;
+  }
+}

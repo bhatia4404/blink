@@ -1,0 +1,29 @@
+export function SectionFooter() {
+  return (
+    <div className="">
+      <svg
+        width="100%"
+        height="100%"
+        id="svg"
+        viewBox="0 0 1440 180"
+        xmlns="http://www.w3.org/2000/svg"
+        className="transition duration-300 ease-in-out delay-150 "
+      >
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="5%" stopColor="#0096c7"></stop>
+            <stop offset="95%" stopColor="#8ed1fc"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          d="M 0,400 L 0,0 C 85.93301435406698,45.942583732057415 171.86602870813397,91.88516746411483 284,116 C 396.13397129186603,140.11483253588517 534.4688995215312,142.4019138755981 621,143 C 707.5311004784688,143.5980861244019 742.2583732057417,142.5071770334928 816,141 C 889.7416267942583,139.4928229665072 1002.4976076555024,137.5693779904306 1113,114 C 1223.5023923444976,90.43062200956938 1331.751196172249,45.21531100478469 1440,0 L 1440,400 L 0,400 Z"
+          stroke="none"
+          strokeWidth="0"
+          fill="url(#gradient)"
+          fillOpacity="1"
+          className="transition-all duration-300 ease-in-out delay-150 path-0"
+        ></path>
+      </svg>
+    </div>
+  );
+}
