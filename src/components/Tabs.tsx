@@ -1,57 +1,49 @@
 import { useState } from "react";
 import { Tab } from "./Tab";
-
+import { useNavigate } from "react-router-dom";
 export function Tabs() {
-  const [activeTabs, setActiveTabs] = useState([1, 0, 0, 0, 0, 0, 0]);
+  const [activeTabs, setActiveTabs] = useState([1, 0, 0, 0, 0]);
+  const navigate = useNavigate();
   return (
-    <ul className="tabs flex justify-around gap-8 whitespace-nowrap max-xl:hidden">
+    <ul className="tabs flex justify-around gap-14 whitespace-nowrap max-xl:hidden">
       <Tab
-        text="Personal"
+        text="Home"
         active={activeTabs[0]}
         onClick={() => {
-          setActiveTabs([1, 0, 0, 0, 0, 0, 0]);
+          setActiveTabs([1, 0, 0, 0, 0]);
+          navigate("/home");
         }}
       />
       <Tab
-        text="Business"
+        text="Create Account"
         active={activeTabs[1]}
         onClick={() => {
-          setActiveTabs([0, 1, 0, 0, 0, 0, 0]);
+          setActiveTabs([0, 1, 0, 0, 0]);
+          navigate("/signup");
         }}
       />
       <Tab
-        text="Corporate"
+        text="Help"
         active={activeTabs[2]}
         onClick={() => {
-          setActiveTabs([0, 0, 1, 0, 0, 0, 0]);
+          setActiveTabs([0, 0, 1, 0, 0]);
+          navigate("/help");
         }}
       />
       <Tab
-        text="Private Banking"
+        text="Services"
         active={activeTabs[3]}
         onClick={() => {
-          setActiveTabs([0, 0, 0, 1, 0, 0, 0]);
+          setActiveTabs([0, 0, 0, 1, 0]);
+          navigate("/services");
         }}
       />
       <Tab
-        text="Privy Leage"
+        text="About"
         active={activeTabs[4]}
         onClick={() => {
-          setActiveTabs([0, 0, 0, 0, 1, 0, 0]);
-        }}
-      />
-      <Tab
-        text="NRI Services"
-        active={activeTabs[5]}
-        onClick={() => {
-          setActiveTabs([0, 0, 0, 0, 0, 1, 0]);
-        }}
-      />
-      <Tab
-        text="Investors"
-        active={activeTabs[6]}
-        onClick={() => {
-          setActiveTabs([0, 0, 0, 0, 0, 0, 1]);
+          setActiveTabs([0, 0, 0, 0, 1]);
+          navigate("/about");
         }}
       />
     </ul>

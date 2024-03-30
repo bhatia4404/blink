@@ -1,12 +1,20 @@
-export function LeftService({ text, svg }: { text: string; svg: any }) {
+export function LeftService({
+  heading,
+  text,
+  svg,
+}: {
+  heading: string;
+  text: string;
+  svg: any;
+}) {
   return (
-    <div className="service flex items-center ">
+    <div className="service flex">
       <div className="bubble relative">
         <svg
           id="sw-js-blob-svg"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-[600px]"
+          className="h-[500px]"
         >
           <defs>
             {" "}
@@ -36,21 +44,35 @@ export function LeftService({ text, svg }: { text: string; svg: any }) {
         </svg>
         {svg}
       </div>
-      <p>{text}</p>
+      <div className="service-details mt-[120px]">
+        <h1 className="font-bold text-[40px] text-blue7">{heading}</h1>
+        <p className="text-[#555555] font-semibold text-[20px]">{text}</p>
+      </div>
     </div>
   );
 }
 
-export function RightService({ text, svg }: { text: string; svg: any }) {
+export function RightService({
+  heading,
+  text,
+  svg,
+}: {
+  heading: string;
+  text: string;
+  svg: any;
+}) {
   return (
-    <div className="service flex items-center ">
-      <p>{text}</p>
+    <div className="service flex ml-[20px] mr-[20px]">
+      <div className="service-details mt-[120px]">
+        <h1 className="font-bold text-[40px] text-blue7">{heading}</h1>
+        <p className="text-[#555555] font-semibold text-[20px]">{text}</p>
+      </div>
       <div className="bubble relative">
         <svg
           id="sw-js-blob-svg"
-          viewBox="0 0 100 100"
+          viewBox="0 0 80 100"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-[600px]"
+          className="h-[500px]"
         >
           {" "}
           <defs>

@@ -9,14 +9,13 @@ export function Tab({
 }) {
   return (
     <li className={`relative`} onClick={onClick}>
-      <a
-        href="#"
+      <button
         className={`font-roboto font-semibold ${
           active ? "text-blue9" : "text-blue6 "
         } ${active ? "" : "text-blue8"}`}
       >
         {text}
-      </a>
+      </button>
       <div className={`h-[4px] bg-white ${!active ? "hidden" : ""}`}></div>
     </li>
   );

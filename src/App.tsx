@@ -1,13 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AppBar } from "./components/AppBar";
+import { SignUp } from "./pages/signup";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import { HomePage } from "./pages/homepage";
+import { Help } from "./pages/help";
+import { Services } from "./pages/services";
+import { About } from "./pages/about";
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="app mt-[150px]">
+      <BrowserRouter>
+        <AppBar />
+
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Navigate to="/home" />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

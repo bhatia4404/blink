@@ -5,7 +5,7 @@ import { Search } from "./Search";
 import { LoginButton } from "./LoginButton";
 export function AppBar() {
   return (
-    <div className="flex max-xl:smallAppBar bg-blue1 shadow-gray-200 shadow-lg">
+    <div className="flex fixed top-0 w-[100%] max-xl:smallAppBar bg-blue1 shadow-gray-200 shadow-lg">
       <div className="brand-tabs flex items-center  w-[80%] justify-evenly">
         <div className="side-brand flex items-center gap-3 ">
           <MenuBar />

@@ -13,4 +13,10 @@
   .smallAppBar > .search-login {
     width: 35%;
   }
+  .serviceSvg {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    height: 220px;
+  }
 }
