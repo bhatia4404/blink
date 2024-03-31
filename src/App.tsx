@@ -6,11 +6,14 @@ import { HomePage } from "./pages/homepage";
 import { Help } from "./pages/help";
 import { Services } from "./pages/services";
 import { About } from "./pages/about";
+import { RecoilRoot } from "recoil";
 function App() {
   return (
     <div className="app mt-[150px]">
       <BrowserRouter>
-        <AppBar />
+        <RecoilRoot>
+          <AppBar />
+        </RecoilRoot>
 
         <Routes>
           <Route path="/home" element={<HomePage />} />
