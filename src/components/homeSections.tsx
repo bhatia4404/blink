@@ -41,10 +41,7 @@ export function HomeSection2() {
       <div className="services flex flex-col">
         <LeftService
           heading="All in One"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae
-          explicabo velit. Facilis, laboriosam omnis ducimus dolorum impedit hic
-          sequi necessitatibus quisquam architecto autem doloremque assumenda eius
-          reprehenderit consequuntur consectetur!"
+          text="Blink puts you in control of your money with a range of features designed for ease and convenience. Send and receive money instantly with anyone on Blink, regardless of their bank."
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +55,7 @@ export function HomeSection2() {
         />
         <RightService
           heading="Wallet"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium consectetur distinctio veniam, sit repellendus a dicta, exercitationem nisi mollitia ea possimus delectus deserunt vel neque nesciunt odit aliquid quia. Quis!"
+          text="Blink's secure wallet lets you manage everything in one place. Add your bank account for easy payments and top-ups. Send and receive money instantly with other Blink users, all with industry-leading security protecting your information. Track your spending with clear transaction history. Blink is always innovating to make your wallet even more useful."
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,10 +69,7 @@ export function HomeSection2() {
         />
         <LeftService
           heading="Add a Bank Account"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae
-        explicabo velit. Facilis, laboriosam omnis ducimus dolorum impedit hic
-        sequi necessitatibus quisquam architecto autem doloremque assumenda eius
-        reprehenderit consequuntur consectetur!"
+          text="Link your bank to Blink in minutes for effortless money management. No new accounts needed! Enjoy secure integration, send and receive money with ease, and keep track of everything from a single hub."
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,9 +84,7 @@ export function HomeSection2() {
 
         <RightService
           heading="Card"
-          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, sed
-          repudiandae sapiente harum in voluptatem excepturi maxime totam eveniet,
-          accusamus, eos possimus at similique et ea enim aliquam ipsum ab!"
+          text="Think of it as a secure and powerful digital twin of your traditional debit card. It lives conveniently within the app, allowing you to make purchases online and in-store (contactless payments) without ever needing a physical card."
           svg={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -110,5 +102,5 @@ export function HomeSection2() {
 }
 
 export function HomeSection3() {
-  return <div>hello</div>;
+  return <div></div>;
 }

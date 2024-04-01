@@ -9,7 +9,7 @@ import { About } from "./pages/about";
 import { RecoilRoot } from "recoil";
 function App() {
   return (
-    <div className="app mt-[150px]">
+    <div className="app mt-[150px] relative">
       <BrowserRouter>
         <RecoilRoot>
           <AppBar />

@@ -8,6 +8,9 @@ export default {
         goblin: ['"Goblin One"', ...defaultTheme.fontFamily.serif],
         roboto: ['"Roboto"', ...defaultTheme.fontFamily.serif],
       },
+      backgroundImage: {
+        footer: "url('src/img/footer.svg')",
+      },
     },
     screens: {
       sm: "640px",

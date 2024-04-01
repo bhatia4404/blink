@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MenuTabs } from "./menutabs";
 import menu from "../img/menu.svg";
 export function MenuBar() {
   const [visible, setVisible] = useState(false);
@@ -12,11 +13,13 @@ export function MenuBar() {
       >
         <img src={menu} />
       </button>
-      <div className={`menu ${!visible ? "hidden" : ""} absolute top-5`}>
-        <ul className="menu_list">
-          <li>hi</li>
-          <li>hello</li>
-        </ul>
+      <div
+        className={`menu ${
+          !visible ? "hidden" : ""
+        } absolute top-[50px] shadow-blue2 shadow-md xl:hidden rounded-xl bg-white pt-[10px] pb-[10px] pl-[30px] pr-[30px] z-[3]`}
+        onClick={() => setVisible(false)}
+      >
+        <MenuTabs />
       </div>
     </div>
   );

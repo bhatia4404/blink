@@ -1,4 +1,4 @@
-import { HomePageFooter } from "../components/homePageFooter";
+import { About } from "../components/about";
 import {
   HomeSection1,
   HomeSection2,
@@ -7,14 +7,14 @@ import {
 import { SectionFooter1 } from "../components/SectionFooters";
 export function HomePage() {
   return (
-    <div className="flex flex-col gap-4 h-screen">
+    <div className="flex relative flex-col gap-4 h-screen">
       <HomeSection1 />
       <SectionFooter1 />
       <HomeSection2 />
-      <SectionFooter1 />
+      {/* <SectionFooter1 /> */}
       <HomeSection3 />
 
-      <HomePageFooter />
+      <About />
     </div>
   );
 }

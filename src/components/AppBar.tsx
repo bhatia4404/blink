@@ -11,7 +11,7 @@ export function AppBar() {
           <MenuBar />
           <Brand />
         </div>
-        <Tabs />
+        <Tabs vertical={false} />
       </div>
       <div className="search-login pl-[10px] flex items-center w-[20%] bg-blue8 gap-8  justify-center gap-3 rounded-l-full ">
         <Search />
