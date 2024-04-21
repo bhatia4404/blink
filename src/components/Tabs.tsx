@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Tab } from "./Tab";
 import { useLocation, useNavigate } from "react-router-dom";
+import { activeTabsAtom } from "../atoms/activeTabs";
+import { useRecoilState } from "recoil";
 export function Tabs() {
-  const [activeTabs, setActiveTabs] = useState([1, 0, 0, 0, 0]);
+  const [activeTabs, setActiveTabs] = useRecoilState(activeTabsAtom);
   const { pathname } = useLocation();
   useEffect(() => {
     if (pathname == "/home") {

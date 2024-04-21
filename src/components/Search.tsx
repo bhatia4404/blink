@@ -34,8 +34,8 @@ export function Search() {
             onClick={(e) => e.stopPropagation()}
           />
           <datalist id="search_options">
-            {cuurentSearchOptions.map((el) => (
-              <option value={el} />
+            {cuurentSearchOptions.map((el, i) => (
+              <option value={el} key={`${i + 1}`} />
             ))}
           </datalist>
         </div>

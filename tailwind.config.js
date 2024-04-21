@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         goblin: ['"Goblin One"', ...defaultTheme.fontFamily.serif],
         roboto: ['"Roboto"', ...defaultTheme.fontFamily.serif],
+        lugrasimo: ['"Lugrasimo"', ...defaultTheme.fontFamily.serif],
       },
       backgroundImage: {
         footer: "url('src/img/footer.svg')",
@@ -15,6 +16,7 @@ export default {
     screens: {
       sm: "640px",
       md: "768px",
+      mid: "1130px",
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
