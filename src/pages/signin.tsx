@@ -3,11 +3,13 @@ import signinimg from "../img/signin.svg";
 import bird from "../img/signuppagebird.svg";
 import { useNavigate } from "react-router-dom";
 import { tokenAtom } from "../atoms/currentUser";
+import error from "../img/error.svg";
 import { useSetRecoilState } from "recoil";
 export function SignIn() {
   const setToken = useSetRecoilState(tokenAtom);
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
+  const [errMessages, setErrMessages] = useState([]);
   const navigate = useNavigate();
   return (
     <div className="flex flex-cols justify-around mr-[50px]">
@@ -48,17 +50,36 @@ export function SignIn() {
                 }
               );
               const data = await res.json();
+              if (data.errors) {
+                console.log(data.errors);
+                setErrMessages(data.errors);
+                return;
+              }
+              if (data.message != "Logged in") {
+                setErrMessages([
+                  {
+                    message: data.message,
+                  },
+                ]);
+                return;
+              }
               setToken(data.token);
               // console.log(data.token);
 
-              if (data.message) {
-                localStorage.setItem("token", data.token);
-                navigate("/dashboard");
-              }
+              localStorage.setItem("token", data.token);
+              navigate("/dashboard");
             }}
           >
             Sign In
           </button>
+          <ul className="err_message">
+            {errMessages.map((err) => (
+              <li className="text-[12px] text-red font-semibold flex items-center gap-[4px]">
+                <img src={error} alt="" className="h-[16px]" />
+                {err.message}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

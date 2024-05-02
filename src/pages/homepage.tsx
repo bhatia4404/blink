@@ -11,7 +11,7 @@ export function HomePage() {
       <HomeSection1 />
       <SectionFooter1 />
       <HomeSection2 />
-      {/* <SectionFooter1 /> */}
+      <SectionFooter1 />
       <HomeSection3 />
 
       <About />

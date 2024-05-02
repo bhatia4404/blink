@@ -102,5 +102,32 @@ export function HomeSection2() {
 }
 
 export function HomeSection3() {
-  return <div></div>;
+  return (
+    <div className="home-section-3 mt-[100px]">
+      <h1 className="text-blue9 font-bold text-6xl text-center mb-[50px]">
+        FAQs
+      </h1>
+      <div className="questions flex justify-around">
+        <div className="question">
+          <h2 className="font-bold text-[30px] text-blue7">
+            Q. How can I reset my password?
+          </h2>
+          <ul className="answer list-[square] ml-[50px] text-[20px] l-[100px] text-blue8 font-semibold">
+            <li className="">Go to Sign in page.</li>
+            <li className="">Click on 'Forgot Password'.</li>
+          </ul>
+        </div>
+        <div className="question flex flex-col gap-3">
+          <h2 className="font-bold text-[30px] text-blue7">
+            Q.How do I deactivate my virtual card?
+          </h2>
+          <ul className="answer list-[square] ml-[50px] text-[20px] l-[100px] text-blue8 font-semibold">
+            <li className="">Log into your account.</li>
+            <li className="">Click on Profile Icon.</li>
+            <li className="">Click on 'Disable Card' button.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 }

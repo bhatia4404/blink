@@ -9,7 +9,7 @@ export function Users() {
       {users.length === 0 ? (
         <p className="text-sm font-medium text-blue8">No users found</p>
       ) : (
-        users.map((user: any, i: number) =>
+        users.slice(0, 10).map((user: any, i: number) =>
           user.email != currentUser.email ? (
             <div
               className="flex gap-2 items-center justify-between font-medium text-blue8"

@@ -46,6 +46,8 @@ export default {
       bluepeach3: "#FDFCDC",
       bluepeach4: "#FED9B7",
       bluepeach5: "#F07167",
+      green: "#66FF00",
+      red: "#E23D28",
     },
   },
   plugins: [],

@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Brand } from "../components/Brand";
 import cardsvg from "../img/card.svg";
+import { Negative, Positive } from "./transaction";
 export function CardNtransactions({
   card,
   name,
@@ -16,9 +18,14 @@ export function CardNtransactions({
   transactions: any[];
 }) {
   const number = card.number ? card.number.toString() : "";
+  const [message, setMessage] = useState("");
 
   return (
-    <div className="card_transactions items-end flex flex-col gap-[50px] w-[40%] mid:w-[45%] ">
+    <div className="card_transactions items-end flex flex-col gap-[20px] w-[40%] mid:w-[45%] ">
+      <div className="message text-blue7 font-bold">
+        <p>{`${message}`}</p>
+        <p>{message ? "Please Login again." : ""}</p>
+      </div>
       {card.exists ? (
         <div className="card max-w-[350px] max-mid:h-[160px] h-[180px] bg-blue1 w-[100%] pl-[20px] rounded-xl flex flex-col gap-3 relative">
           <div className="flex items-center relative w-fit lg:gap-3">
@@ -61,7 +68,22 @@ export function CardNtransactions({
               **/**
             </p>
             <p className="name">______________________</p>
-            <button className="bg-blue8 text-white pl-[5px] pr-[5px] rounded-full text-[16px] ">
+            <button
+              className="bg-blue8 text-white pl-[5px] pr-[5px] rounded-full text-[16px] "
+              onClick={async function () {
+                const res = await fetch(
+                  "http://localhost:3001/api/v1/account/createcard",
+                  {
+                    method: "PUT",
+                    headers: {
+                      authorization: localStorage.getItem("token"),
+                    },
+                  }
+                );
+                const d = await res.json();
+                setMessage(d.message);
+              }}
+            >
               Get a card
             </button>
             <img
@@ -72,14 +94,28 @@ export function CardNtransactions({
           </div>
         </div>
       )}
-      <div className="transactions bg-blue2 h-[280px] w-[100%] ">
-        {transactions.map((transac) => (
-          <div>
-            <p>
-              {transac.amt} {transac.to ? transac.to : transac.from}
-            </p>
-          </div>
-        ))}
+      <div className="self-stretch flex flex-col gap-3 pl-[10px] bg-[#F0F8FF] rounded-xl">
+        <h1 className="text-blue8 font-roboto font-semibold text-2xl ">
+          Transactions
+        </h1>
+
+        <div className="transactions max-h-[280px] w-[100%] flex flex-col gap-[10px] overflow-y-scroll">
+          {transactions.map((transac) =>
+            transac.amt > 0
+              ? Positive({
+                  amt: transac.amt,
+                  from: transac.from,
+                  time: transac.time,
+                  id: transac._id,
+                })
+              : Negative({
+                  amt: transac.amt,
+                  to: transac.to,
+                  time: transac.time,
+                  id: transac._id,
+                })
+          )}
+        </div>
       </div>
     </div>
   );
