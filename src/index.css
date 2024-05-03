@@ -19,4 +19,7 @@
     left: 120px;
     height: 220px;
   }
+  .activesvg > svg {
+    stroke: #0077b6;
+  }
 }

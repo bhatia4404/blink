@@ -33,12 +33,7 @@ export function DashboardBar() {
         }`}
       >
         <ProfileLink title="My Profile" path="/profile" />
-        <hr />
-        <ProfileLink title="Change Name" path="/changename" />
-        <hr className="" />
-        <ProfileLink title="Change Password" path="/changepin" />
-        <hr />
-        {true ? <ProfileLink title="Change PIN" path="/changepin" /> : ""}
+
         {true ? <hr /> : ""}
         <ProfileLinkLogout />
       </div>

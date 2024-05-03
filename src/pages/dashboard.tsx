@@ -12,7 +12,6 @@ export function Dashboard() {
   const navigate = useNavigate();
 
   const currentUser = useRecoilValue(CurrentUserSelector);
-
   return token ? (
     <div>
       <DashboardBar />
@@ -33,7 +32,7 @@ export function Dashboard() {
   ) : (
     <div className="flex flex-col items-center">
       <p className="text-blue8 font-semibold text-xl text-center">
-        You were logged out from yor previous session. <br />
+        You were logged out from your previous session. <br />
         Please login again.
       </p>
       <a

@@ -1,7 +1,9 @@
 import { useRecoilValue } from "recoil";
 import { UsersSelector } from "../atoms/users";
 import { CurrentUserSelector } from "../atoms/currentUser";
+import { useNavigate } from "react-router-dom";
 export function Users() {
+  const navigate = useNavigate();
   const users = useRecoilValue(UsersSelector);
   const currentUser = useRecoilValue(CurrentUserSelector);
   return (
@@ -13,7 +15,7 @@ export function Users() {
           user.email != currentUser.email ? (
             <div
               className="flex gap-2 items-center justify-between font-medium text-blue8"
-              key={i + 1}
+              key={user.blinkid}
             >
               <div className="iniitals_username flex items-center gap-3">
                 <div className="bg-blue2 pl-[4px] pr-[4px] rounded-full text-lg">
@@ -23,7 +25,14 @@ export function Users() {
                   {user.firstname} {user.lastname}
                 </div>
               </div>
-              <button className="bg-blue2 pl-[10px] pr-[10px] rounded-xl">
+              <button
+                className="bg-blue2 pl-[10px] pr-[10px] rounded-xl"
+                onClick={function () {
+                  navigate(
+                    `/transfer?to=${user.blinkId}&firstname=${user.firstname}`
+                  );
+                }}
+              >
                 Send
               </button>
             </div>

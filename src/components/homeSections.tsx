@@ -22,7 +22,7 @@ export function HomeSection1() {
         </div>
         <div className="bannerImage">
           <img
-            src="src/img/banner.png"
+            src="src/img/blinkbanner.svg"
             alt=""
             className="h-[476px] w-[528px]"
           />
