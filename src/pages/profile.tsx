@@ -56,7 +56,7 @@ export function Profile() {
               <img src={rightarrow} alt="" className="" />
               Change Name
             </button>
-            {user.card ? (
+            {user.card.exists ? (
               <button
                 className="text-2xl font-semibold font-roboto flex items-center gap-2 hover:text-blue7 hover:activesvg"
                 onClick={function () {
@@ -64,7 +64,7 @@ export function Profile() {
                 }}
               >
                 <img src={rightarrow} alt="" className="" />
-                Change Pin
+                Delete Card
               </button>
             ) : (
               <></>

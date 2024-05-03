@@ -21,12 +21,12 @@ import { Login } from "./components/loginplease";
 import { Transfer } from "./pages/transfer";
 import { Profile } from "./pages/profile";
 import { ChangeName } from "./pages/changename";
-import { ChangePin } from "./pages/changepin";
+import { ChangePin } from "./pages/deleteCard";
 import { ChangePassword } from "./pages/changepassword";
 function App() {
   localStorage.removeItem("token");
   return (
-    <div className="app mt-[150px] relative">
+    <div className="app mt-[120px] relative">
       <RecoilRoot>
         <BrowserRouter>
           <AppBar />
