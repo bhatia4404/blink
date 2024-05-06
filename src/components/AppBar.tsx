@@ -16,7 +16,7 @@ export function AppBar() {
         <Tabs />
       </div>
       <div className="search-login pl-[10px] flex items-center w-[20%] bg-blue8 gap-8  justify-center gap-3 rounded-l-full ">
-        <Search />
+        {/* <Search /> */}
         <LoginButton />
       </div>
     </div>

@@ -1,3 +1,5 @@
+import { date } from "zod";
+
 export function Positive({
   amt,
   from,
@@ -6,19 +8,24 @@ export function Positive({
 }: {
   amt: number;
   from: string;
-  time: number;
+  time: string;
   id: string;
 }) {
+  const date = new Date(time);
+
   return (
     <div
       key={id}
       className="transaction rounded-2xl bg-blue8 relative pt-[5px] pb-[15px] text-white font-bold"
     >
       <div className=" mid:ml-[20px] flex gap-2 mid:gap-6 items-center">
-        <p>{amt}</p>
+        <p>+{amt}</p>
         <p>From :{from}</p>
       </div>
-      <p className="absolute right-2 bottom-0">{time} ago</p>
+      <p className="absolute right-2 bottom-0 ">
+        {`${date.toLocaleTimeString()}`} {"  "}
+        {`${date.toLocaleDateString()}`}
+      </p>
     </div>
   );
 }
@@ -31,9 +38,11 @@ export function Negative({
 }: {
   amt: number;
   to: string;
-  time: number;
+  time: string;
   id: string;
 }) {
+  const date = new Date(Date.parse(time));
+
   return (
     <div
       key={id}
@@ -43,7 +52,10 @@ export function Negative({
         <p>{amt}</p>
         <p>To : {to}</p>
       </div>
-      <p className="absolute right-2 bottom-0">{time} ago</p>
+      <p className="absolute right-2 bottom-0">
+        {date.toLocaleTimeString()} {"  "}
+        {date.toLocaleDateString()}
+      </p>
     </div>
   );
 }
