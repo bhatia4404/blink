@@ -1,17 +1,19 @@
+import { Chatbot } from "../components/Chatbox";
 import img1 from "../img/5124556.jpg";
 
 export function Help() {
   return (
-    <div className="flex flex-row justify-around">
-      <div className="w-[40%] h-full p-4 ">
-        <img src={img1} />
+    <div className="">
+      <div className="flex items-center justify-around ">
+        <img src={img1} className="w-[50%] max-h-[525.4px]" />
+
+        <div className="w-[100%] flex items-center justify-center mb-[150px] ">
+          <Chatbot />
+        </div>
       </div>
-      <div className="w-[40%] h-full p-4  flex flex-col items-center space-y-9 ">
-        <h1 className="text-3xl text-center font-roboto text-blue7 border-b-[2px] border-blue8 ">
-          Always there for assistance
-        </h1>
-        <p className="text-blue8 font-semibold font-roboto">Chat Bot</p>
-      </div>
+      <h1 className="text-4xl text-center font-roboto font-semibold text-[#60a7ff] text-blue4 border-b-[1px] border-blue6 ">
+        Always there for your assistance
+      </h1>
     </div>
   );
 }
