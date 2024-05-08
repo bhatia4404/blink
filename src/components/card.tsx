@@ -17,6 +17,7 @@ export function CardNtransactions({
   name: string;
   transactions: any[];
 }) {
+  const [cvvtext, setcvvtext] = useState("Show CVV");
   const number = card.number ? card.number.toString() : "";
   const [message, setMessage] = useState("");
 
@@ -45,11 +46,17 @@ export function CardNtransactions({
               {card.expiry}
             </p>
             <p className="name">{name}</p>
-            <img
-              src={cardsvg}
-              className="absolute right-1 bottom-0 h-[40px] fill-blue8"
-              alt=""
-            />
+            <div className="flex gap-3 absolute right-1 bottom-0 ">
+              <button
+                className="text-xs"
+                onClick={function () {
+                  setcvvtext(card.cvv);
+                }}
+              >
+                {cvvtext}
+              </button>
+              <img src={cardsvg} className="h-[40px] fill-blue8" alt="" />
+            </div>
           </div>
         </div>
       ) : (

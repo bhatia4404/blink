@@ -28,7 +28,7 @@ export function SignIn() {
             onChange={(e) => setInputEmail(e.target.value)}
           />
           <input
-            type="text"
+            type="password"
             placeholder="Password"
             className="outline-0 border-b-[2px] border-b-[#E5E4E2] focus:border-b-blue2 pl-[3px] pr-[3px] pt-[2px] pb-[2px] text-blue8 font-medium w-[65%]"
             onChange={(e) => setInputPassword(e.target.value)}
@@ -68,7 +68,7 @@ export function SignIn() {
                 return;
               }
               setToken(data.token);
-              // console.log(data.token);
+              console.log(data.token);
 
               localStorage.setItem("token", data.token);
               setLoading(false);

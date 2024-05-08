@@ -1,4 +1,5 @@
 import { About } from "../components/about";
+import footer from "../img/footer.svg";
 import {
   HomeSection1,
   HomeSection2,
@@ -13,8 +14,12 @@ export function HomePage() {
       <HomeSection2 />
       <SectionFooter1 />
       <HomeSection3 />
-
-      <About />
+      <div className="relative">
+        <p className="absolute right-3 bottom-4 text-blue9 font-semibold">
+          Copyright @blink
+        </p>
+        <img src={footer} className="" />
+      </div>
     </div>
   );
 }
