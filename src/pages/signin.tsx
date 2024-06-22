@@ -53,7 +53,6 @@ export function SignIn() {
               );
               const data = await res.json();
               if (data.errors) {
-                console.log(data.errors);
                 setErrMessages(data.errors);
                 setLoading(false);
                 return;
@@ -68,7 +67,6 @@ export function SignIn() {
                 return;
               }
               setToken(data.token);
-              console.log(data.token);
 
               localStorage.setItem("token", data.token);
               setLoading(false);

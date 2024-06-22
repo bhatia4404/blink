@@ -1,4 +1,3 @@
-import { About } from "../components/about";
 import footer from "../img/footer.svg";
 import {
   HomeSection1,

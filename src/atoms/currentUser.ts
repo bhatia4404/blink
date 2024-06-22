@@ -10,7 +10,7 @@ export const CurrentUserSelector = selector({
       `http://localhost:3001/api/v1/account/find?token=${get(tokenAtom)}`
     );
     const { user } = await res.json();
-    console.log(user);
+
     return user;
   },
 });

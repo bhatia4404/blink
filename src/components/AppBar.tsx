@@ -1,9 +1,8 @@
 import { Brand } from "./Brand";
 import { Tabs } from "./Tabs";
 import { MenuBar } from "./MenuBar";
-import { Search } from "./Search";
+
 import { LoginButton } from "./LoginButton";
-import { useLocation } from "react-router-dom";
 
 export function AppBar() {
   return (
