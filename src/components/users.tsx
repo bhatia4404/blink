@@ -15,7 +15,7 @@ export function Users() {
           user.email != currentUser.email ? (
             <div
               className="flex gap-2 items-center justify-between font-medium text-blue8"
-              key={user.blinkid}
+              key={i}
             >
               <div className="iniitals_username flex items-center gap-3">
                 <div className="bg-blue2 pl-[4px] pr-[4px] rounded-full text-lg">

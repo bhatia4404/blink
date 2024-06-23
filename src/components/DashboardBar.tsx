@@ -4,15 +4,21 @@ import user from "../img/user.svg";
 import { ProfileLink, ProfileLinkLogout } from "./profileLinks";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { CurrentUserSelector } from "../atoms/currentUser";
+import { useNavigate } from "react-router-dom";
 export function DashboardBar() {
   const currentUser = useRecoilValue(CurrentUserSelector);
   const [profileLinksVisible, setProfileLinksVisible] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <div className="flex fixed top-0 w-[100%]  bg-blue1 shadow-gray-200 shadow-lg z-[1] justify-around items-center">
-      <div className="side-brand flex items-center">
+      <button
+        className="side-brand flex items-center"
+        onClick={function () {
+          navigate("/dashboard");
+        }}
+      >
         <Brand />
-      </div>
+      </button>
       <p className="font-lugrasimo text-md font-bold text-blue8">
         Welcome{" "}
         <span className="ml-[8px]">{`${currentUser.firstname} ${currentUser.lastname}`}</span>

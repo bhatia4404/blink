@@ -17,6 +17,7 @@ export function CardNtransactions({
   name: string;
   transactions: any[];
 }) {
+  let i = 0;
   const [cvvtext, setcvvtext] = useState("Show CVV");
   const number = card.number ? card.number.toString() : "";
   const [message, setMessage] = useState("");
@@ -113,13 +114,13 @@ export function CardNtransactions({
                   amt: transac.amt,
                   from: transac.from,
                   time: transac.time,
-                  id: transac._id,
+                  id: i++,
                 })
               : Negative({
                   amt: transac.amt,
                   to: transac.to,
                   time: transac.time,
-                  id: transac._id,
+                  id: i++,
                 })
           )}
         </div>

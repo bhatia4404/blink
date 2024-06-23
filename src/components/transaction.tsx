@@ -9,7 +9,7 @@ export function Positive({
   amt: number;
   from: string;
   time: string;
-  id: string;
+  id: number;
 }) {
   const date = new Date(time);
 
@@ -39,7 +39,7 @@ export function Negative({
   amt: number;
   to: string;
   time: string;
-  id: string;
+  id: number;
 }) {
   const date = new Date(Date.parse(time));
 

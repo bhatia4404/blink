@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { activeTabsAtom } from "../atoms/activeTabs";
 
 import { TabVertical } from "./TabVertical";
+import { useRecoilState } from "recoil";
 export function MenuTabs() {
-  const [activeTabs, setActiveTabs] = useState([1, 0, 0, 0, 0]);
+  const [activeTabs, setActiveTabs] = useRecoilState(activeTabsAtom);
   const { pathname } = useLocation();
   useEffect(() => {
     if (pathname == "/home") {
-      setActiveTabs([1, 0, 0, 0, 0]);
+      setActiveTabs([1, 0, 0, 0]);
     } else if (pathname == "/signup") {
-      setActiveTabs([0, 1, 0, 0, 0]);
+      setActiveTabs([0, 1, 0, 0]);
     } else if (pathname == "/help") {
-      setActiveTabs([0, 0, 1, 0, 0]);
-    } else if (pathname == "/services") {
-      setActiveTabs([0, 0, 0, 1, 0]);
+      setActiveTabs([0, 0, 1, 0]);
     } else if (pathname == "/about") {
-      setActiveTabs([0, 0, 0, 0, 1]);
+      setActiveTabs([0, 0, 0, 1]);
     }
+    // else if (pathname == "/services") {
+    //   setActiveTabs([0, 0, 0, 1, 0]);}
   }, [pathname]);
 
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ export function MenuTabs() {
         text="Home"
         active={activeTabs[0]}
         onClick={() => {
-          // setActiveTabs([1, 0, 0, 0, 0]);
+          // setActiveTabs([1, 0, 0, 0]);
           navigate("/home");
         }}
       />
@@ -34,7 +36,7 @@ export function MenuTabs() {
         text="Create Account"
         active={activeTabs[1]}
         onClick={() => {
-          // setActiveTabs([0, 1, 0, 0, 0]);
+          // setActiveTabs([0, 1, 0, 0,]);
           navigate("/signup");
         }}
       />
@@ -42,23 +44,23 @@ export function MenuTabs() {
         text="Help"
         active={activeTabs[2]}
         onClick={() => {
-          // setActiveTabs([0, 0, 1, 0, 0]);
+          // setActiveTabs([0, 0, 1, 0, ]);
           navigate("/help");
         }}
       />
-      <TabVertical
+      {/* <TabVertical
         text="Services"
         active={activeTabs[3]}
         onClick={() => {
           // setActiveTabs([0, 0, 0, 1, 0]);
           navigate("/services");
         }}
-      />
+      /> */}
       <TabVertical
         text="About"
-        active={activeTabs[4]}
+        active={activeTabs[3]}
         onClick={() => {
-          // setActiveTabs([0, 0, 0, 0, 1]);
+          // setActiveTabs([0, 0, 0, 1]);
           navigate("/about");
         }}
       />
