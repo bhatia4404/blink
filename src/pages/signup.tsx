@@ -57,6 +57,7 @@ export function SignUp() {
             className="signup bg-blue2 w-fit text-blue8 text-xl font-bold pl-3 pr-3 pt-2 pb-2  rounded-full hover:bg-blue8 hover:text-white hover:font-semibold transition-colors duration-300 mt-5"
             onClick={async function () {
               setLoading(true);
+
               const createUser = await fetch(
                 "http://localhost:3001/api/v1/user/signup",
                 {
@@ -79,7 +80,6 @@ export function SignUp() {
                 return;
               }
               if (res.message != "Signed up") {
-                console.log(res.message);
                 setErrMessages([{ message: res.message }]);
                 return;
               }
