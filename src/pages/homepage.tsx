@@ -1,4 +1,5 @@
 import footer from "../img/footer.svg";
+import process from "process";
 import {
   HomeSection1,
   HomeSection2,
@@ -6,6 +7,8 @@ import {
 } from "../components/homeSections";
 import { SectionFooter1 } from "../components/SectionFooters";
 export function HomePage() {
+  const beurl = process.env.backendurl;
+  console.log(beurl);
   return (
     <div className="flex relative flex-col gap-4 h-screen">
       <HomeSection1 />

@@ -45,26 +45,32 @@ export function ChangeName() {
               setLoading(false);
               return;
             }
-            await fetch("http://localhost:3001/api/v1/account/firstname", {
-              method: "PUT",
-              headers: {
-                authorization: token,
-                "Content-type": "application/json",
-              },
-              body: JSON.stringify({
-                firstname: inputFirstname,
-              }),
-            });
-            await fetch("http://localhost:3001/api/v1/account/lastname", {
-              method: "PUT",
-              headers: {
-                authorization: token,
-                "Content-type": "application/json",
-              },
-              body: JSON.stringify({
-                lastname: inputLastname,
-              }),
-            });
+            await fetch(
+              "http://${process.env.backendurl}/api/v1/account/firstname",
+              {
+                method: "PUT",
+                headers: {
+                  authorization: token,
+                  "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                  firstname: inputFirstname,
+                }),
+              }
+            );
+            await fetch(
+              "http://${process.env.backendurl}/api/v1/account/lastname",
+              {
+                method: "PUT",
+                headers: {
+                  authorization: token,
+                  "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                  lastname: inputLastname,
+                }),
+              }
+            );
             setLoading(false);
             setMessage("Request Submitted.");
           }}

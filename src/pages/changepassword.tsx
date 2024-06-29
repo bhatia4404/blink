@@ -44,16 +44,19 @@ export function ChangePassword() {
               setLoading(false);
               return;
             }
-            await fetch("http://localhost:3001/api/v1/account/password", {
-              method: "PUT",
-              headers: {
-                authorization: token,
-                "Content-type": "application/json",
-              },
-              body: JSON.stringify({
-                password: newPassword,
-              }),
-            });
+            await fetch(
+              "http://${process.env.backendurl}/api/v1/account/password",
+              {
+                method: "PUT",
+                headers: {
+                  authorization: token,
+                  "Content-type": "application/json",
+                },
+                body: JSON.stringify({
+                  password: newPassword,
+                }),
+              }
+            );
             setLoading(false);
             setMessage("Request Submitted");
           }}

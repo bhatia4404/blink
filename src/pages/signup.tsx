@@ -59,7 +59,7 @@ export function SignUp() {
               setLoading(true);
 
               const createUser = await fetch(
-                "http://localhost:3001/api/v1/user/signup",
+                "http://${process.env.backendurl}/api/v1/user/signup",
                 {
                   method: "POST",
                   headers: {

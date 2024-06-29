@@ -7,7 +7,9 @@ export const UsersSelector = selector({
   key: "userSelector",
   get: async ({ get }) => {
     const allUsers = await fetch(
-      `http://localhost:3001/api/v1/account/find?filter=${get(usersFilterAtom)}`
+      `http://${process.env.backendurl}/api/v1/account/find?filter=${get(
+        usersFilterAtom
+      )}`
     );
     const { users: data } = await allUsers.json();
     return data;

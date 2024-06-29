@@ -80,7 +80,7 @@ export function CardNtransactions({
               className="bg-blue8 text-white pl-[5px] pr-[5px] rounded-full text-[16px] "
               onClick={async function () {
                 const res = await fetch(
-                  "http://localhost:3001/api/v1/account/createcard",
+                  "http://${process.env.backendurl}/api/v1/account/createcard",
                   {
                     method: "PUT",
                     headers: {

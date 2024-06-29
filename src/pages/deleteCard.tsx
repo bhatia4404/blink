@@ -24,7 +24,7 @@ export function ChangePin() {
           onClick={async function () {
             setLoading(true);
             const res = await fetch(
-              "http://localhost:3001/api/v1/account/deletecard",
+              "http://${process.env.backendurl}/api/v1/account/deletecard",
               {
                 method: "PUT",
                 headers: {

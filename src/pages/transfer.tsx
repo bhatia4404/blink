@@ -60,7 +60,7 @@ export function Transfer() {
               onClick={async function () {
                 setLoading(true);
                 const res = await fetch(
-                  `http://localhost:3001/api/v1/account/transfer?amt=${amount}&to=${to}`,
+                  `http://${process.env.backendurl}/api/v1/account/transfer?amt=${amount}&to=${to}`,
                   {
                     method: "POST",
                     headers: {
