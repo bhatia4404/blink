@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { usersFilterAtom } from "../atoms/users";
 import { Users } from "./users";
-import { CurrentUserSelector } from "../atoms/currentUser";
+
 export function SendMoneyUsers() {
   const setUserFilter = useSetRecoilState(usersFilterAtom);
 

@@ -9,7 +9,7 @@ export function SignUp() {
   const [inputLastname, setInputLastname] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const [errMessages, setErrMessages] = useState([]);
+  const [errMessages, setErrMessages] = useState([{}]);
   const navigate = useNavigate();
   return (
     <div className="flex justify-around mr-[50px]">
@@ -106,7 +106,7 @@ export function SignUp() {
             )}
           </button>
           <ul className="err_message">
-            {errMessages.map((err) => (
+            {errMessages.map((err: any) => (
               <li className="text-[12px] text-red font-semibold flex items-center gap-[4px]">
                 <img src={error} alt="" className="h-[16px]" />
                 {err.message}

@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import { HomePage } from "./pages/homepage";
 import { Help } from "./pages/help";
-import { Services } from "./pages/services";
 import { About } from "./pages/about";
 import { RecoilRoot } from "recoil";
 import { SignIn } from "./pages/signin";

@@ -51,7 +51,7 @@ export function CardNtransactions({
               <button
                 className="text-xs"
                 onClick={function () {
-                  setcvvtext(card.cvv);
+                  setcvvtext(`${card.cvv}`);
                 }}
               >
                 {cvvtext}
@@ -84,7 +84,7 @@ export function CardNtransactions({
                   {
                     method: "PUT",
                     headers: {
-                      authorization: localStorage.getItem("token"),
+                      authorization: `${localStorage.getItem("token")}`,
                     },
                   }
                 );

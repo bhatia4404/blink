@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Brand } from "../components/Brand";
 import user from "../img/user.svg";
 import { ProfileLink, ProfileLinkLogout } from "./profileLinks";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { CurrentUserSelector } from "../atoms/currentUser";
 import { useNavigate } from "react-router-dom";
 export function DashboardBar() {

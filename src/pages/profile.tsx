@@ -49,7 +49,7 @@ export function Profile() {
           <div className="fields">
             <button
               className="text-2xl font-semibold font-roboto flex items-center gap-2 hover:text-blue7"
-              onClick={function (e) {
+              onClick={function () {
                 navigate("/change/name");
               }}
             >

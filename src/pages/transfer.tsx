@@ -2,7 +2,6 @@ import { useSearchParams } from "react-router-dom";
 import { DashboardBar } from "../components/DashboardBar";
 import theft from "../img/theftblink.svg";
 import security from "../img/security.svg";
-import error from "../img/error.svg";
 import { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { tokenAtom } from "../atoms/currentUser";
@@ -10,7 +9,7 @@ export function Transfer() {
   const token = useRecoilValue(tokenAtom);
   const [searchParms] = useSearchParams();
   const to = searchParms.get("to");
-  const firstname = searchParms.get("firstname");
+  const firstname: any = searchParms.get("firstname");
   const [amount, setAmount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [transactionMessage, setTransactionMessage] = useState("");
@@ -51,7 +50,7 @@ export function Transfer() {
                 type="number"
                 placeholder="Amount"
                 className="outline-0 w-[70%] border-[1px] border-blue8 rounded-lg pl-[10px] pt-[3px] pb-[3px] text-xl relative text-blue8 focus:border-[2px]"
-                onChange={function (e) {
+                onChange={function (e: any) {
                   setAmount(e.target.value);
                 }}
               />
