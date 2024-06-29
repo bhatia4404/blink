@@ -106,12 +106,15 @@ export function SignUp() {
             )}
           </button>
           <ul className="err_message">
-            {errMessages.map((err: any) => (
-              <li className="text-[12px] text-red font-semibold flex items-center gap-[4px]">
-                <img src={error} alt="" className="h-[16px]" />
-                {err.message}
-              </li>
-            ))}
+            {errMessages.map((err: any) => {
+              if (err.message)
+                return (
+                  <li className="text-[12px] text-red font-semibold flex items-center gap-[4px]">
+                    <img src={error} alt="" className="h-[16px]" />
+                    {err.message}
+                  </li>
+                );
+            })}
           </ul>
         </div>
       </div>
