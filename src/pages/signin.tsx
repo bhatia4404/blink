@@ -39,7 +39,7 @@ export function SignIn() {
             onClick={async function () {
               setLoading(true);
               const res = await fetch(
-                "http://${process.env.backendurl}/api/v1/user/signin",
+                `http://${process.env.backendurl}/api/v1/user/signin`,
                 {
                   method: "POST",
                   headers: {

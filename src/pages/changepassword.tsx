@@ -45,7 +45,7 @@ export function ChangePassword() {
               return;
             }
             await fetch(
-              "http://${process.env.backendurl}/api/v1/account/password",
+              `http://${process.env.backendurl}/api/v1/account/password`,
               {
                 method: "PUT",
                 headers: {

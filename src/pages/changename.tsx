@@ -46,7 +46,7 @@ export function ChangeName() {
               return;
             }
             await fetch(
-              "http://${process.env.backendurl}/api/v1/account/firstname",
+              `http://${process.env.backendurl}/api/v1/account/firstname`,
               {
                 method: "PUT",
                 headers: {
@@ -59,7 +59,7 @@ export function ChangeName() {
               }
             );
             await fetch(
-              "http://${process.env.backendurl}/api/v1/account/lastname",
+              `http://${process.env.backendurl}/api/v1/account/lastname`,
               {
                 method: "PUT",
                 headers: {
