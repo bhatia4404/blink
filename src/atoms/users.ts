@@ -7,7 +7,7 @@ export const UsersSelector = selector({
   key: "userSelector",
   get: async ({ get }) => {
     const allUsers = await fetch(
-      `http://${process.env.backendurl}/api/v1/account/find?filter=${get(
+      `http://ec2-13-48-44-130.eu-north-1.compute.amazonaws.com/api/v1/account/find?filter=${get(
         usersFilterAtom
       )}`
     );

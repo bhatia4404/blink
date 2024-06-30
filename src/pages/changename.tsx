@@ -46,7 +46,7 @@ export function ChangeName() {
               return;
             }
             await fetch(
-              `http://${process.env.backendurl}/api/v1/account/firstname`,
+              `http://ec2-13-48-44-130.eu-north-1.compute.amazonaws.com/api/v1/account/firstname`,
               {
                 method: "PUT",
                 headers: {
@@ -59,7 +59,7 @@ export function ChangeName() {
               }
             );
             await fetch(
-              `http://${process.env.backendurl}/api/v1/account/lastname`,
+              `http://ec2-13-48-44-130.eu-north-1.compute.amazonaws.com/api/v1/account/lastname`,
               {
                 method: "PUT",
                 headers: {
