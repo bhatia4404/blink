@@ -45,7 +45,7 @@ export function ChangePassword() {
               return;
             }
             await fetch(
-              `http://ec2-13-48-44-130.eu-north-1.compute.amazonaws.com/api/v1/account/password`,
+              `https://blinkbackend.onrender.com//api/v1/account/password`,
               {
                 method: "PUT",
                 headers: {
