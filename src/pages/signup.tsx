@@ -66,9 +66,9 @@ export function SignUp() {
                     "Content-type": "application/json",
                   },
                   body: JSON.stringify({
-                    firstname: inputFirstname,
-                    lastname: inputLastname,
-                    email: inputEmail,
+                    firstname: inputFirstname.toLowerCase(),
+                    lastname: inputLastname.toLowerCase(),
+                    email: inputEmail.toLowerCase(),
                     password: inputPassword,
                   }),
                 }

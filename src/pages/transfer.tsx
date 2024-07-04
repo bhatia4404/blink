@@ -5,6 +5,7 @@ import security from "../img/security.svg";
 import { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { tokenAtom } from "../atoms/currentUser";
+import { capitalize } from "../helpers/capitalize";
 export function Transfer() {
   const token = useRecoilValue(tokenAtom);
   const [searchParms] = useSearchParams();
@@ -38,9 +39,9 @@ export function Transfer() {
           <div className="shadow-xl rounded-xl w-[300px] flex flex-col items-center gap-[20px] pt-[50px] h-[320px] ">
             <div className="initial_name flex gap-4 text-2xl font-roboto items-center font-semibold">
               <p className="bg-[#92e3a9] w-fit pl-[12px] pr-[12px] pt-[4px] pb-[4px] rounded-full">
-                {firstname[0]}
+                {capitalize(firstname[0])}
               </p>
-              <p className="">{firstname}</p>
+              <p className="">{capitalize(firstname)}</p>
             </div>
             <p className="text-lg text-bluered4 font-bold font-roboto">{to}</p>
             <div className="input flex gap-4 justify-center">

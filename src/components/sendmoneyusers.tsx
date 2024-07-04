@@ -14,7 +14,7 @@ export function SendMoneyUsers() {
         className="border-[1px] border-blue3 focus:border-[2px] rounded pl-[10px] pr-[10px] outline-0 text-blue8 mt-[10px] w-[100%]"
         placeholder="Search Users..."
         onChange={(e) => {
-          setUserFilter(e.target.value);
+          setUserFilter(e.target.value.toLowerCase());
         }}
       />
       <Suspense

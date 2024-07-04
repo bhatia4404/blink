@@ -4,6 +4,7 @@ import rightarrow from "../img/rightarrow.svg";
 import infosvg from "../img/info.svg";
 import { useNavigate } from "react-router-dom";
 import { DashboardBar } from "../components/DashboardBar";
+import { capitalize } from "../helpers/capitalize";
 export function Profile() {
   const navigate = useNavigate();
   const user = useRecoilValue(CurrentUserSelector);
@@ -16,7 +17,7 @@ export function Profile() {
             <p className="text-5xl bg-blue8 text-white rounded-full pl-[10px] pr-[10px] pt-[15px] pb-[15px] w-fit font-roboto">{`${user.firstname[0]}${user.lastname[0]}`}</p>
             <div className="name_blinkid flex flex-col ">
               <p className="text-4xl font-roboto font-semibold text-blue8">
-                {user.firstname} {user.lastname}
+                {capitalize(user.firstname)} {capitalize(user.lastname)}
               </p>
               <p className="text-roboto font-semibold text-blue7">
                 {user.blinkId}

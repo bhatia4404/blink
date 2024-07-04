@@ -2,6 +2,7 @@ import { useRecoilValue } from "recoil";
 import { UsersSelector } from "../atoms/users";
 import { CurrentUserSelector } from "../atoms/currentUser";
 import { useNavigate } from "react-router-dom";
+import { capitalize } from "../helpers/capitalize";
 export function Users() {
   const navigate = useNavigate();
   const users = useRecoilValue(UsersSelector);
@@ -19,10 +20,12 @@ export function Users() {
             >
               <div className="iniitals_username flex items-center gap-3">
                 <div className="bg-blue2 pl-[4px] pr-[4px] rounded-full text-lg">
-                  {`${user.firstname[0]}${user.lastname[0]}`}
+                  {`${capitalize(user.firstname[0])}${capitalize(
+                    user.lastname[0]
+                  )}`}
                 </div>
                 <div className="username">
-                  {user.firstname} {user.lastname}
+                  {capitalize(user.firstname)} {capitalize(user.lastname)}
                 </div>
               </div>
               <button

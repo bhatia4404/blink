@@ -9,7 +9,7 @@ import { About } from "./pages/about";
 import { RecoilRoot } from "recoil";
 import { SignIn } from "./pages/signin";
 import { Dashboard } from "./pages/dashboard";
-
+import { ForgotPasswordPage } from "./pages/forgotpassword";
 import { Login } from "./components/loginplease";
 import { Transfer } from "./pages/transfer";
 import { Profile } from "./pages/profile";
@@ -42,6 +42,7 @@ function App() {
               <Route path="/change/pin" element={<ChangePin />} />
               <Route path="/change/password" element={<ChangePassword />} />
             </Route>
+            <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
           </Routes>
         </BrowserRouter>
       </RecoilRoot>

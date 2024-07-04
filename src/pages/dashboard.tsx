@@ -6,7 +6,7 @@ import { CardNtransactions } from "../components/card";
 import { useRecoilValue } from "recoil";
 import { CurrentUserSelector, tokenAtom } from "../atoms/currentUser";
 import { useNavigate } from "react-router-dom";
-
+import { capitalize } from "../helpers/capitalize";
 export function Dashboard() {
   const token = useRecoilValue(tokenAtom);
   const navigate = useNavigate();
@@ -24,7 +24,9 @@ export function Dashboard() {
 
         <CardNtransactions
           card={currentUser.card}
-          name={`${currentUser.firstname} ${currentUser.lastname}`}
+          name={`${capitalize(currentUser.firstname)} ${capitalize(
+            currentUser.lastname
+          )}`}
           transactions={currentUser.transactions}
         />
       </div>

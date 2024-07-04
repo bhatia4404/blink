@@ -51,6 +51,10 @@ export function CardNtransactions({
               <button
                 className="text-xs"
                 onClick={function () {
+                  if (cvvtext == `${card.cvv}`) {
+                    setcvvtext("Show CVV");
+                    return;
+                  }
                   setcvvtext(`${card.cvv}`);
                 }}
               >
