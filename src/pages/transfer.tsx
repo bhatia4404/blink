@@ -60,7 +60,7 @@ export function Transfer() {
               onClick={async function () {
                 setLoading(true);
                 const res = await fetch(
-                  `https://blinkbackend.onrender.com//api/v1/account/transfer?amt=${amount}&to=${to}`,
+                  `https://blinkbackend.onrender.com/api/v1/account/transfer?amt=${amount}&to=${to}`,
                   {
                     method: "POST",
                     headers: {

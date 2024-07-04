@@ -7,7 +7,7 @@ export const UsersSelector = selector({
   key: "userSelector",
   get: async ({ get }) => {
     const allUsers = await fetch(
-      `https://blinkbackend.onrender.com//api/v1/account/find?filter=${get(
+      `https://blinkbackend.onrender.com/api/v1/account/find?filter=${get(
         usersFilterAtom
       )}`
     );

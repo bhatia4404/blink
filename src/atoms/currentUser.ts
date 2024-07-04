@@ -9,7 +9,7 @@ export const CurrentUserSelector = selector({
   key: "currentUser",
   get: async ({ get }) => {
     const res = await fetch(
-      `https://blinkbackend.onrender.com//api/v1/account/find?token=${get(
+      `https://blinkbackend.onrender.com/api/v1/account/find?token=${get(
         tokenAtom
       )}`
     );

@@ -24,7 +24,7 @@ export function ChangePin() {
           onClick={async function () {
             setLoading(true);
             const res = await fetch(
-              `https://blinkbackend.onrender.com//api/v1/account/deletecard`,
+              `https://blinkbackend.onrender.com/api/v1/account/deletecard`,
               {
                 method: "PUT",
                 headers: {

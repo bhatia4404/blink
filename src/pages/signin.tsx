@@ -39,7 +39,7 @@ export function SignIn() {
             onClick={async function () {
               setLoading(true);
               const res = await fetch(
-                `https://blinkbackend.onrender.com//api/v1/user/signin`,
+                `https://blinkbackend.onrender.com/api/v1/user/signin`,
                 {
                   method: "POST",
                   headers: {

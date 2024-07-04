@@ -45,7 +45,7 @@ export function ChangePassword() {
               return;
             }
             await fetch(
-              `https://blinkbackend.onrender.com//api/v1/account/password`,
+              `https://blinkbackend.onrender.com/api/v1/account/password`,
               {
                 method: "PUT",
                 headers: {

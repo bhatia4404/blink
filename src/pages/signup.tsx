@@ -59,7 +59,7 @@ export function SignUp() {
               setLoading(true);
 
               const createUser = await fetch(
-                `https://blinkbackend.onrender.com//api/v1/user/signup`,
+                `https://blinkbackend.onrender.com/api/v1/user/signup`,
                 {
                   method: "POST",
                   headers: {
