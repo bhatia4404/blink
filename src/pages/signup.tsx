@@ -224,17 +224,21 @@ export function SignUp() {
               )}
             </button>
           </div>
-          <ul className="err_message">
-            {(visible ? errMessagesData : errMessagesVerify).map((err: any) => {
-              if (err.message)
-                return (
-                  <li className="text-[12px] text-red font-semibold flex items-center gap-[4px]">
-                    <img src={error} alt="" className="h-[16px]" />
-                    {err.message}
-                  </li>
-                );
-            })}
-          </ul>
+          <div className="flex flex-col items-center">
+            <ul className="err_message">
+              {(visible ? errMessagesData : errMessagesVerify).map(
+                (err: any) => {
+                  if (err.message)
+                    return (
+                      <li className="text-[12px] text-red font-semibold flex items-center gap-[4px]">
+                        <img src={error} alt="" className="h-[16px]" />
+                        {err.message}
+                      </li>
+                    );
+                }
+              )}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
