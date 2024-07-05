@@ -5,6 +5,7 @@ import { ProfileLink, ProfileLinkLogout } from "./profileLinks";
 import { useRecoilValue } from "recoil";
 import { CurrentUserSelector } from "../atoms/currentUser";
 import { useNavigate } from "react-router-dom";
+import { capitalize } from "../helpers/capitalize";
 export function DashboardBar() {
   const currentUser = useRecoilValue(CurrentUserSelector);
   const [profileLinksVisible, setProfileLinksVisible] = useState(false);
@@ -21,7 +22,9 @@ export function DashboardBar() {
       </button>
       <p className="font-lugrasimo text-md font-bold text-blue8">
         Welcome{" "}
-        <span className="ml-[8px]">{`${currentUser.firstname} ${currentUser.lastname}`}</span>
+        <span className="ml-[8px]">{`${capitalize(
+          currentUser.firstname
+        )} ${capitalize(currentUser.lastname)}`}</span>
       </p>
       <button
         className="flex items-center bg-blue8

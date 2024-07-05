@@ -2,14 +2,14 @@ import { useRecoilValue } from "recoil";
 import { CurrentUserSelector } from "../atoms/currentUser";
 import rightarrow from "../img/rightarrow.svg";
 import infosvg from "../img/info.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DashboardBar } from "../components/DashboardBar";
 import { capitalize } from "../helpers/capitalize";
 export function Profile() {
   const navigate = useNavigate();
   const user = useRecoilValue(CurrentUserSelector);
   return (
-    <div className="profile">
+    <div className="profile flex flex-col ">
       <DashboardBar />
       <div className="flex justify-around">
         <div className="ml-[50px] flex flex-col gap-4">
@@ -93,6 +93,12 @@ export function Profile() {
         be made available in the near future. Stay informed by following our
         updates!
       </p>
+      <Link
+        className="signin bg-blue2 w-fit text-blue8 text-xl font-bold pl-3 pr-3 pt-2 pb-2  rounded-full hover:bg-blue8 hover:text-white hover:font-semibold transition-colors duration-300 mt-5 hover:cursor-pointer self-center"
+        to="/dashboard"
+      >
+        Back
+      </Link>
     </div>
   );
 }

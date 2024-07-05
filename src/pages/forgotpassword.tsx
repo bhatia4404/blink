@@ -34,7 +34,7 @@ export function ForgotPasswordPage() {
               //sendin email
               try {
                 const res = await fetch(
-                  `https://blinkbackend.onrender.com/api/v1/account/newpassword?email=${inputEmail}`,
+                  `https://blinkbackend.onrender.com/api/v1/account/newpassword?email=${inputEmail.toLowerCase()}`,
                   {
                     method: "PUT",
                   }
