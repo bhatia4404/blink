@@ -14,7 +14,7 @@ export function Profile() {
       <div className="flex justify-around">
         <div className="ml-[50px] flex flex-col gap-4">
           <div className="initials_name flex items-center gap-4">
-            <p className="text-5xl bg-blue8 text-white rounded-full pl-[10px] pr-[10px] pt-[15px] pb-[15px] w-fit font-roboto">{`${user.firstname[0]}${user.lastname[0]}`}</p>
+            <p className="text-5xl bg-blue8 text-white rounded-full pl-[10px] pr-[10px] pt-[15px] pb-[15px] w-fit font-roboto">{`${user.firstname[0].toUpperCase()}${user.lastname[0].toUpperCase()}`}</p>
             <div className="name_blinkid flex flex-col ">
               <p className="text-4xl font-roboto font-semibold text-blue8">
                 {capitalize(user.firstname)} {capitalize(user.lastname)}
