@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# Blink
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Blink** is a banking model designed to provide secure and convenient digital wallet and card facilities. This project simulates a streamlined banking experience, allowing users to manage funds, make transactions, and monitor card activities seamlessly. Built with scalability and security in mind, Blink can serve as a foundation for developing comprehensive banking applications.
 
-Currently, two official plugins are available:
+- Visit [Blink](https://blinkpay.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
 
-## Expanding the ESLint configuration
+- Wallet
+- Virtual Card
+- Link Bank Account (Soon)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Technologies Used / Dependencies
 
-- Configure the top-level `parserOptions` property like this:
+- ## Front-end
+  - Dynamic UI : React.js
+  - State Management : Recoil
+  - Design : Tailwind CSS
+- ## Back-end
+  - Server : Express.js
+  - Data Validation : Zod
+  - Authentication : JSON Web Tokens
+  - Email Communication : EmailJS
+  - Database : MongoDB
+  - ODM : Mongoose
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+# Contribution
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Contributions are welcome! Please follow these steps to conttribute :
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a Pull Request.
+
+# Contact
+
+For questions or support, please reach out via :
+
+1. Email : [shivambhatia4404@gmail.com](mailto:shivambhatia4404@gmail.com)
+2. LinkedIn : [@bhatia4404](https://www.linkedin.com/in/bhatia4404/)
+3. X : [@bhatia_4404](https://x.com/bhatia_4404)
